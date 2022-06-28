@@ -1,3 +1,34 @@
+/* Шрифты */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Контент */
+body {
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+}
+.content {
+    width: 1200px;
+    margin: 0 auto;
+}
+.title--mod {
+    color: red;
+}
+.subtitle--mod {
+    color: green;
+}
+.wrap-link {
+    margin-bottom: 16px;
+}
+
+/* Изображения */
+img {
+    max-width: 100%;
+}
+.img-wrap {
+    display: flex;
+    margin-bottom: 16px;
+}
+
 /* Форма */
 .form__wrap {
     display: flex;
@@ -18,27 +49,6 @@
 }
 .form__element--submit:hover {
     background-color: #2980b9;
-}
-
-/* Контент */
-.content {
-    width: 1200px;
-    margin: 0 auto;
-}
-.title--mod {
-    color: red;
-}
-.subtitle--mod {
-    color: green;
-}
-.wrap-link {
-    margin-bottom: 16px;
-}
-
-/* Изображения */
-.img-wrap {
-    display: flex;
-    margin-bottom: 16px;
 }
 
 /* Кнопки */

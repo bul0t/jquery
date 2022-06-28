@@ -9,67 +9,26 @@
 </head>
 <body>
 
-    <div class="content">
-        <div class="form">
-            <h1 class="form__title">Работаем с формами</h1>
-            <form class="form__wrap" action="#">
-                <div class="form__element form__checkbox">
-                    <label><input name="fruit" type="checkbox" value="apple">Яблоко</label>
-                    <label><input name="fruit" type="checkbox" value="orange">Апельсин</label>
-                </div>
-                <div class="form__element form__radio">
-                    <label><input name="sex" type="radio" value="male">Male</label>
-                    <label><input name="sex" type="radio" value="female">Female</label>
-                </div>
-                <input class="form__element" type="text" name="firstname" placeholder="Введите имя" />
-                <input class="form__element" type="text" name="lastname" placeholder="Введите фамилию" />
-                <input class="form__element form__element--submit" type="submit" />
-            </form>
-        </div>
-    </div>
+    <ul>
+        <li>элемент 1</li>
+        <li>элемент 2</li>
+        <li>элемент 3</li>
+        <li>элемент 4</li>
+        <li>элемент 5</li>
+        <li>элемент 6</li>
+    </ul>
 
-    <div class="content">
-        <h1 class="title">jQuery</h1>
-        <h2 class="subtitle">Работаем с jQuery</h2>
-        <p>
-            Параграф 1
-        </p>
-        <p>
-            Параграф 2
-        </p>
-        <p>
-            Ниже прогрузится AJAX из файла ajax.html:
-        </p>
-        <div class="ajax-wrap">
-            <div class="ajax"></div>
-        </div>
-        <div class="btn-wrap">
-            <button class="btn btn--ajax">Загрузить</button>
-        </div>
-        <div class="wrap-link">
-            <a class="link" href="https://ya.ru">Yandex</a>
-        </div>
-        <div class="btn-wrap">
-            <button class="btn btn--hide">Скрыть</button>
-            <button class="btn btn--show">Показать</button>
-            <button class="btn btn--toggle">Переключатель</button>
-        </div>
-        <div class="img-wrap">
-            <img class="img" src="img/bmw.jpeg" alt="BMW" />
-        </div>
-        <div class="list">
-            <div class="list__title">В комплектацию каждой перголы входит:</div>
-            <ul class="list__wrap">
-                <li>Встроенное LED освещение;</li>
-                <li>Мотор Somfy (Франция) и пульт управления;</li>
-                <li>Встроенная система водоотведения;</li>
-                <li>Окраска профиля в любой цвет по RAL.</li>
-            </ul>
-        </div> <!-- list -->
-    </div>
+    <img src="img/slider-1.jpg" alt="slider" /><br />
+    <img src="img/spider-1.jpg" alt="spider" />
 
     <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/pColor.js"></script>
+    <script>
+        const liFirst = $('li:first')
+        liFirst.hide(1000, function() {
+            console.log(this) // выводит DOM-элемент, первого li
+            $(this).text('hello') // его нужно обернуть в jQuery-объект чтобы работали API
+        }).show(1000)
+    </script>
     <script src="js/common.js"></script>
 </body>
 </html>

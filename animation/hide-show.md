@@ -8,6 +8,7 @@
 Скрыть элемент:
 
     $('img').hide()
+    $('img').hide(3000) // скрыть элемент за 3 сек
 
 Показать элемент:
 
@@ -27,7 +28,9 @@
 
     let i = 0;
     $('.btn--toggle').on('click', function() {
+
         img.toggle('slow', function() {
             console.log('Анимация закончилась! ' + i++)
         })
+
     })
