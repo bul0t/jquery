@@ -3,7 +3,10 @@
 
 Создаём обработчик события:
 
-    $('button').on('click', function(){})
+    $('button').on('click', function() {
+        console.log(this)    // элемент на котором произошло событие
+        console.log($(this)) // DOM-элемент на котором произошло событие
+    })
 
 Меняем изображение по клику:
 
@@ -31,11 +34,15 @@
 
 ## Сокращенная запись события
 
-    $('button').on('click', function(){})
+    $('button').on('click', function() {
+
+    })
 
 Можно заменить на:
 
-    $('button').click(function(){})
+    $('button').click(function() {
+        
+    })
 
 ## Разное
 - `trigger(event)` - событие инициализируется из скрипта

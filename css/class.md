@@ -1,6 +1,7 @@
 # Классы
 Работаем с классами в CSS.
 
+## addClass()
 Добавляем класс элементу:
 
     $(".wrap").addClass("wrap--mod");
@@ -11,10 +12,7 @@
         if(i == 2) return 'title--mod';
     })
 
-Проверяем имеет ли элемент данный класс:
-
-    $('h1').hasClass('title')
-
+## removeClass()
 Удаляем класс:
     
     $('h1').removeClass('title')
@@ -23,14 +21,20 @@
         if(i == 2) return 'title--mod'
     })
 
+## hasClass()
+Проверяем имеет ли элемент данный класс:
+
+    $('h1').hasClass('title')
+
+## toggleClass()
 Переключаем класс (проверяем по событию):
 
     $('h1').toggleClass('title')
 
+## Разное
 Изучить дополнительно:
 
     toggleClass(className, switch)
     toggleClass(function(index, currentClass, switch){ return className }, switch)
 
-## Разное
-- добавлять удалять и т.д, можно сразу несколько классов `addClass("title title--mod")`
+Добавлять, удалять и т.д, можно сразу несколько классов `addClass("title title--mod")`

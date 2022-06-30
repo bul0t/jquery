@@ -1,6 +1,12 @@
 # animate
 Задаём анимацию самостоятельно. `animate` изменяет один или несколько CSS-свойств.
 
+    $('img').animate({
+        // css-свойства
+    }, time, function() {
+        // колбэк
+    })
+
 Аналог `fadeOut`:
 
     $('img').animate({
@@ -57,3 +63,6 @@
         'fail':     () => console.log('fail'),
         'always':   () => console.log('always')
     })
+
+## Разное
+На цвет `color: red` и аналогичные, анимация не действует.

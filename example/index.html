@@ -9,25 +9,30 @@
 </head>
 <body>
 
-    <ul>
-        <li>элемент 1</li>
-        <li>элемент 2</li>
-        <li>элемент 3</li>
-        <li>элемент 4</li>
-        <li>элемент 5</li>
-        <li>элемент 6</li>
-    </ul>
-
-    <img src="img/slider-1.jpg" alt="slider" /><br />
-    <img src="img/spider-1.jpg" alt="spider" />
+    <div class="content">
+        <div class="form">
+            <h1 class="form__title">Работаем с формами</h1>
+            <form class="form__wrap" action="#">
+                <div class="form__element form__checkbox">
+                    <label><input name="fruit" type="checkbox" value="apple" checked>Яблоко</label>
+                    <label><input name="fruit" type="checkbox" value="orange">Апельсин</label>
+                </div>
+                <div class="form__radio form__element">
+                    <label><input name="sex" type="radio" value="male" checked>Male</label>
+                    <label><input name="sex" type="radio" value="female">Female</label>
+                </div>
+                <input class="form__element" type="text" name="firstname" placeholder="Введите имя" />
+                <input class="form__element" type="text" name="lastname" placeholder="Введите фамилию" />
+                <input class="form__element form__element--submit" type="submit" />
+            </form>
+        </div>
+    </div>
 
     <script src="js/jquery-3.6.0.min.js"></script>
     <script>
-        const liFirst = $('li:first')
-        liFirst.hide(1000, function() {
-            console.log(this) // выводит DOM-элемент, первого li
-            $(this).text('hello') // его нужно обернуть в jQuery-объект чтобы работали API
-        }).show(1000)
+        $('li').on('click', function(evt) {
+            console.log(evt.screenX, evt.screenY)
+        })
     </script>
     <script src="js/common.js"></script>
 </body>
